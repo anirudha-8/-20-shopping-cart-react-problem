@@ -7,6 +7,7 @@ function App() {
 		{ id: 3, name: "Product C" },
 		{ id: 4, name: "Product D" },
 	];
+	const addToCart = (product) => {};
 	return (
 		<div>
 			<h1>Shopping Cart</h1>
@@ -15,7 +16,8 @@ function App() {
 				{products.map((product) => {
 					return (
 						<li key={product.id}>
-							{product.name} <button>Add To Cart</button>
+							{product.name}{" "}
+							<button onClick={() => addToCart(product)}>Add To Cart</button>
 						</li>
 					);
 				})}
